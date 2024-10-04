@@ -60,3 +60,14 @@ console.log(_variable + " " + $variable + " " + variable + " " + Variable);
 // Ejercicio 1.11
 let num1 = 4;
 let num2 = 2;
+console.log(num1 + " + " + num2 + " = " + (num1 + num2));
+console.log(num1 + " - " + num2 + " = " + (num1 - num2));
+console.log(num1 + " * " + num2 + " = " + (num1 * num2));
+console.log(num1 + " / " + num2 + " = " + (num1 / num2));
+console.log(num1 + " % " + num2 + " = " + (num1 % num2));
+console.log(num1 + " ++ = " + (++num1));
+console.log(num1 + " -- = " + (--num1));
+
+// Ejercicio 1.12
+let txt = `El otro dia me encontré un\neuro tirado en el suelo y\n\tsorpresa\nera falso.`;
+console.log(txt);
