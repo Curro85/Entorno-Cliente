@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS Basico 2</title>
+    <script type="text/javascript">
+        function cargar(nombreScript) {
+            let script = document.createElement("script");
+            script.src = nombreScript;
+            script.type = "text/javascript"
+            document.head.appendChild(script);
+        }
+
+        let opcion = Number(prompt(`Elige el ejercicio:
+        -1 Calculadora de gastos de viaje
+        -2 Calculadora edad canina
+        -3 Calculadora de IMC
+        -4 Calculadora de descuentos
+        -5 Generador de números primos
+        -6 Generador de secuencia de Fibonacci
+        -7 Conversor de temperatura
+        -8 Calcular factorial`));
+
+        switch (opcion) {
+            case 1:
+                cargar("js/ejercicio1.js");
+                break;
+            case 2:
+                cargar("js/ejercicio2.js");
+                break;
+            case 3:
+                cargar("js/ejercicio3.js");
+                break;
+            case 4:
+                cargar("js/ejercicio4.js");
+                break;
+            case 5:
+                cargar("js/ejercicio5.js");
+                break;
+            case 6:
+                cargar("js/ejercicio6.js");
+                break;
+            case 7:
+                cargar("js/ejercicio7.js");
+                break;
+            case 8:
+                cargar("js/ejercicio8.js");
+                break;
+            default:
+                alert("Opción no válida, recarga la página");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Pulse F12 para abrir la consola y ver los resultados</h1>
+    <h2>Recarga con F5 para elegir otro ejercicio</h2>
+
+</body>
+
+</html>
