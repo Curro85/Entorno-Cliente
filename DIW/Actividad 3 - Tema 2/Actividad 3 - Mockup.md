@@ -3,16 +3,16 @@
 
 **Página inicial**
 
-![home](imagenes/Home%20Mockup.png)
+![home](imagenes/Home.png)
 
 **Página de inicio de sesión**
 
-![login](imagenes/Login%20Mockup.png)
+![login](imagenes/Login.png)
 
 **Página de guias**
 
-![guias](imagenes/Guias%20Mockup.png)
+![guias](imagenes/Guias.png)
 
 **Página de contacto**
 
-![contacto](imagenes/Contacto%20Mockup.png)
+![contacto](imagenes/Contacto.png)
