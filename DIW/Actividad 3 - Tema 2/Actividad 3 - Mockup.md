@@ -12,3 +12,7 @@
 **Página de guias**
 
 ![guias](imagenes/Guias%20Mockup.png)
+
+**Página de contacto**
+
+![contacto](imagenes/Contacto%20Mockup.png)
