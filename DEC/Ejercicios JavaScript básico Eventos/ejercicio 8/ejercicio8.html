@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .oculto {
+            display: none
+        }
+
+        .visible {
+            display: block
+        }
+    </style>
+
+    <script>
+        window.onload = function mostrarBloque() {
+            const bl1 = document.getElementById('ficha1');
+            const bl2 = document.getElementById('ficha2');
+            const bl3 = document.getElementById('ficha3');
+
+            document.addEventListener('keypress', function (event) {
+                // Oculto los bloques antes de mostrar el nuevo
+                bl1.classList.remove("visible");
+                bl1.classList.add("oculto");
+
+                bl2.classList.remove("visible");
+                bl2.classList.add("oculto");
+
+                bl3.classList.remove("visible");
+                bl3.classList.add("oculto");
+
+                // Muestro los bloques segun el numero pulsado
+                if (event.key == 1) {
+                    bl1.classList.remove("oculto");
+                    bl1.classList.add("visible");
+                } else if (event.key == 2) {
+                    bl2.classList.remove("oculto");
+                    bl2.classList.add("visible");
+                } else if (event.key == 3) {
+                    bl3.classList.remove("oculto");
+                    bl3.classList.add("visible");
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="oculto" id="ficha1">
+        Hola, soy el bloque 1</div>
+    <div class="oculto" id="ficha2">
+        Hola, soy el bloque 2</div>
+    <div class="oculto" id="ficha3">
+        Hola, soy el bloque 3</div>
+</body>
+
+</html>

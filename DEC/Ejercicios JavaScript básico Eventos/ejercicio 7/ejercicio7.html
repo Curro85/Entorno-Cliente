@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <script>
+        function cambiarColor() {
+            const rojo = document.getElementById('c1');
+            const blanco = document.getElementById('c2');
+            const azul = document.getElementById('c3');
+            let color = "";
+
+            rojo.addEventListener('mouseenter', function () {
+                color = "red";
+            })
+
+            azul.addEventListener('mouseenter', function () {
+                color = "blue"
+            })
+
+            blanco.addEventListener('mouseenter', function (event) {
+                if (event.relatedTarget == rojo || event.relatedTarget == azul) {
+                    blanco.style.background = color;
+                } else {
+                    blanco.style.background = "white";
+                }
+
+            })
+
+        }
+        window.onload = cambiarColor;
+    </script>
+</head>
+
+<body>
+    <div id="c1" style="background: red"></div>
+    <div id="c2" style="background: white"></div>
+    <div id="c3" style="background: blue"></div>
+</body>
+
+</html>

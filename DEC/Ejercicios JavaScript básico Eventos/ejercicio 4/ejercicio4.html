@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <script>
+        function cambiarColor() {
+            const cuadro = document.getElementById('cuadro');
+            cuadro.addEventListener('mouseover', function () {
+                cuadro.style.backgroundColor = "red";
+            });
+
+            cuadro.addEventListener('mouseout', function () {
+                cuadro.style.backgroundColor = "";
+            });
+        }
+        window.onload = cambiarColor;
+    </script>
+</head>
+
+<body>
+    <div style="display: block; width: 100px; height: 100px;" id="cuadro">
+        Cuadro que cambia al entrar el ratón
+    </div>
+</body>
+
+</html>

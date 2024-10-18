@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .boton {
+            display: block;
+            width: 100px;
+            cursor: pointer;
+            margin: 10px;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boton1" class="boton">Pulsar aquí</div>
+    <div id="boton2" class="boton">Pulsar aquí</div>
+
+    <script>
+        function mostrarId() {
+            const botones = document.getElementsByClassName('boton');
+            botones.item(0).addEventListener('click', function () {
+                let id = botones.item(0).getAttribute('id');
+                alert("ID: " + id);
+            });
+
+            botones.item(1).addEventListener('click', function () {
+                let id = botones.item(1).getAttribute('id');
+                alert("ID: " + id);
+            });
+        }
+        window.onload = mostrarId;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <form>
+        <input id="precio" type="number">
+        <input id="cantidad" type="number">
+        <input onclick="calcular()" type="button" id="enviar" value="Calcular">
+        <input id="total" readonly>
+    </form>
+
+    <script>
+        function calcular() {
+            const precio = document.getElementById('precio').value;
+            const cantidad = document.getElementById('cantidad').value;
+            const total = document.getElementById('total');
+            total.value = precio * cantidad;
+        }
+    </script>
+</body>
+
+</html>

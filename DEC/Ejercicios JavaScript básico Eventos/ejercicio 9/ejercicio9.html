@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <style>
+        #boton {
+            position: absolute;
+            display: none;
+        }
+
+        body {
+            height: 200vh
+        }
+    </style>
+
+    <script>
+        window.onload = function mostrarBtn() {
+            const btn = document.getElementById('boton');
+
+            btn.addEventListener('scroll', function () {
+                if (window.scrollY == 100) {
+                    btn.style.display = "block";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    Primera linea o cabecera
+    <div id="boton">Boton</div>
+</body>
+
+</html>

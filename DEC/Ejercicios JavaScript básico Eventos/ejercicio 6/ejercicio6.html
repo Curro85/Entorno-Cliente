@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div>
+        <label>Coordenada X</label>
+        <input id="cX">
+    </div>
+    <div>
+        <label>Coordenada Y</label>
+        <input id="cY">
+    </div>
+
+    <script>
+        function coordenadas() {
+            const ejeX = document.getElementById('cX');
+            const ejeY = document.getElementById('cY');
+
+            document.addEventListener('mousemove', function () {
+                ejeX.value = event.screenX;
+                ejeY.value = event.screenY;
+
+            });
+        }
+        window.onload = coordenadas;
+    </script>
+</body>
+
+</html>
