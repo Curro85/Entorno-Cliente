@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/ejercicio2.css">
+    <script>
+        window.onload = function cambiarColor() {
+            const div1 = document.getElementById('div1');
+            const efecto = document.getElementById('efecto');
+
+            div1.addEventListener('mouseover', function () {
+                efecto.style.backgroundColor = "green";
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div onmouseover="cambiarColor()" id="div1">Pasa por aquí</div>
+    <div id="efecto">Efectos del movimiento</div>
+</body>
+
+</html>
