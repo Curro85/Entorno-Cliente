@@ -1,10 +1,10 @@
 function agregar() {
-    let entrada = document.getElementById('newItemInput').value;
-    if (entrada == '') {
+    let entrada = document.getElementById('newItemInput');
+    if (entrada.value == '') {
         alert("Rellene el campo")
     } else {
         let li = document.createElement("li");
-        li.textContent = entrada;
+        li.textContent = entrada.value;
 
         let checkBtn = document.createElement("button");
         checkBtn.innerHTML = '<i class="material-icons">check</i>';
@@ -20,6 +20,7 @@ function agregar() {
             li.remove();
         }
 
+        entrada.value = "";
         li.appendChild(checkBtn);
         li.appendChild(deleteBtn);
 
