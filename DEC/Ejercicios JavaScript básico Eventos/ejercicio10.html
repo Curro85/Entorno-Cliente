@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript Básico Eventos</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+
+    <script>
+        window.onload = function () {
+            const entrada = document.getElementById('letras');
+
+            entrada.addEventListener('keypress', function (e) {
+                if (e.key >= 0) {
+                    e.preventDefault();
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label>No se aceptan dígitos</label>
+        <input type="text" id="letras">
+    </form>
+</body>
+
+</html>

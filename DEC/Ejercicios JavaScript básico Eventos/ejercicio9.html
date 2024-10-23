@@ -9,7 +9,7 @@
 
     <style>
         #boton {
-            position: absolute;
+            position: fixed;
             display: none;
         }
 
@@ -19,12 +19,14 @@
     </style>
 
     <script>
-        window.onload = function mostrarBtn() {
+        window.onload = function () {
             const btn = document.getElementById('boton');
 
-            btn.addEventListener('scroll', function () {
-                if (window.scrollY == 100) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > window.innerHeight * 0.1) {
                     btn.style.display = "block";
+                } else {
+                    btn.style.display = "none";
                 }
             });
         }
@@ -32,7 +34,7 @@
 </head>
 
 <body>
-    Primera linea o cabecera
+    <h1>Primera linea o cabecera</h1>
     <div id="boton">Boton</div>
 </body>
 
