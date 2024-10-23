@@ -1,5 +1,5 @@
-function agregar($this) {
-    let entrada = $this.previousElementSibling.value;
+function agregar() {
+    let entrada = document.getElementById('newItemInput').value;
     if (entrada == '') {
         alert("Rellene el campo")
     } else {
@@ -10,7 +10,7 @@ function agregar($this) {
         checkBtn.innerHTML = '<i class="material-icons">check</i>';
         checkBtn.classList.add("completeBtn");
         checkBtn.onclick = function () {
-            alert("Buenos dias");
+            li.style.textDecoration = "line-through";
         }
 
         let deleteBtn = document.createElement("button");
