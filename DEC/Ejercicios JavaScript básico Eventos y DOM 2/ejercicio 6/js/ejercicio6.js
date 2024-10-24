@@ -25,11 +25,14 @@ function select() {
         const elementos = lista.getElementsByTagName("li");
         // Elimino la clase selected para quitar el fondo amarillo
         for (let x of elementos) {
+            let vacio = x.innerText.split(", El ganador es:")[0];
+            x.innerText = vacio;
             x.classList.remove("selected");
         }
         // Añado fondo amarillo y mensaje segun el elemento seleccionado
+        let mensaje = `, El ganador es: ${elementos[numAleatorio].innerText}`;
         elementos[numAleatorio].classList.add("selected");
-        alert(`El ganador es: ${nombres[numAleatorio]}`);
+        elementos[numAleatorio].innerHTML += mensaje;
     }
 
 }
