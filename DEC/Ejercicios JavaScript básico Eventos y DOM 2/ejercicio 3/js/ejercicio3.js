@@ -10,7 +10,15 @@ function agregar() {
         checkBtn.innerHTML = '<i class="material-icons">check</i>';
         checkBtn.classList.add("completeBtn");
         checkBtn.onclick = function () {
-            li.classList.add("completed");
+            if (li.classList.contains("completed")) {
+                li.style.textDecoration = "none";
+                li.style.color = "black";
+                li.classList.remove("completed");
+            } else {
+                li.style.textDecoration = "line-through";
+                li.style.color = "#999";
+                li.classList.add("completed");
+            }
         }
 
         let deleteBtn = document.createElement("button");
