@@ -10,7 +10,7 @@ function agregar() {
         checkBtn.innerHTML = '<i class="material-icons">check</i>';
         checkBtn.classList.add("completeBtn");
         checkBtn.onclick = function () {
-            li.style.textDecoration = "line-through";
+            li.classList.add("completed");
         }
 
         let deleteBtn = document.createElement("button");
