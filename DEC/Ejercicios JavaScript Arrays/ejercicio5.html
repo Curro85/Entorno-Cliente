@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript Arrays</title>
+
+    <script>
+        let listNum = [4, 0, 2, 1, 3];
+        let letra = "i";
+        function valorMenor(lista, caracter) {
+            menor = Number.MAX_SAFE_INTEGER;
+            indice = 0;
+            if (caracter == "v") {
+                for (let i = 0; i < lista.length; i++) {
+                    if (lista[i] < menor) {
+                        menor = lista[i];
+                    }
+                }
+                return menor;
+            } else if (caracter == "i") {
+                for (let i = 0; i < lista.length; i++) {
+                    if (lista[i] < menor) {
+                        menor = lista[i];
+                        indice = i;
+                    }
+                }
+                return indice;
+            }
+        }
+
+        console.log(`La lista es: ${listNum}
+El indice del número mas pequeño de la lista es: ${valorMenor(listNum, "i")}
+El número mas pequeño de la lista es: ${valorMenor(listNum, "v")}`);
+    </script>
+</head>
+
+<body>
+    <h1>Pulsa F12 para ver la consola.</h1>
+</body>
+
+</html>

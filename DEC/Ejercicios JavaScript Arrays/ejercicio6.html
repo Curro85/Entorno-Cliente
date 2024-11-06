@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript Arrays</title>
+
+    <script>
+        let listaLetras = ["v", "r", "x", "t", "a"];
+        function existeEn(letra, lista) {
+            for (let i = 0; i < lista.length; i++) {
+                if (letra == lista[i]) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log(existeEn("x",listaLetras));
+    </script>
+</head>
+
+<body>
+    <h1>Pulsa F12 para abrir la consola.</h1>
+</body>
+
+</html>

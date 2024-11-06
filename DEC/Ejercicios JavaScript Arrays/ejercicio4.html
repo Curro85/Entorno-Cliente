@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript Arrays</title>
+
+    <script>
+        let arrayEntrada = [];
+        let entrada = -1;
+        let contador = 0;
+        while (entrada != 0) {
+            entrada = Number(prompt("Introduce un número (0 para dejar de introducir)"));
+            if (isNaN(entrada)) {
+                alert("Introduce un número, por favor");
+            }else if (entrada != 0) {
+                arrayEntrada[contador] = entrada;
+                contador++;
+            }
+        }
+        let pares = 0;
+        let impares = 0;
+        for (let i = 0; i < arrayEntrada.length; i++) {
+            if (arrayEntrada[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+        console.log(`El array de entrada es ${arrayEntrada} y tiene ${pares} pares y ${impares} impares.`)
+    </script>
+</head>
+
+<body>
+    <h1>Pulsa F12 para acceder a la consola!</h1>
+</body>
+
+</html>

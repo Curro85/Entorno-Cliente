@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript Arrays</title>
+
+    <script>
+        function esVocal(letra) {
+            listaVocales = ["a", "e", "i", "o", "u"];
+
+            for (let i = 0; i < listaVocales.length; i ++){
+                if (letra.toLowerCase() == listaVocales[i]){
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log(esVocal("D"));
+    </script>
+</head>
+<body>
+    <h1>Pulsa F12 para abrir la consola.</h1>
+</body>
+</html>
