@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios JavaScript Arrays</title>
 
     <script>
-        let lista = [
-            "lunes-Maria", 
-            "martes-Luis", 
-            "miercoles-Antonia", 
-            "jueves-Pedro",
-            "viernes-Marisa"];
+        function servicio(dia) {
+            let lista = [
+                ["lunes", "María"],
+                ["martes", "Luis"],
+                ["miercoles", "Antonia"],
+                ["jueves", "Pedro"],
+                ["viernes", "Marisa"]];
+            let servicio = "";
+            for (let i = 0; i < lista.length; i++) {
+                if (lista[i][0] == dia.toLowerCase()){
+                    servicio = `Este día se encarga ${lista[i][1]}`;
+                    return servicio
+                }
+            }
+            if (servicio == "") {
+                return "No hay servicio";
+            }
+        }
+        console.log(servicio("Antonio"));
     </script>
 </head>
+
 <body>
     <h1>Pulsa F12 para abrir la consola.</h1>
 </body>
+
 </html>
