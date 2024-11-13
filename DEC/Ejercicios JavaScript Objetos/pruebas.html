@@ -5,7 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios JavaScript Objetos</title>
-    <script type="text/JavaScript" src="ejercicio4.js"></script>
+    <script>
+        function cargar(nombreScript) {
+            let script = document.createElement("script");
+            script.src = nombreScript;
+            script.type = "text/javascript"
+            document.head.appendChild(script);
+        }
+
+        let opcion = Number(prompt(`Elige el ejercicio:
+        -1 Hola, objeto
+        -2 Verificar los vacíos
+        -3 Suma de propiedades de un objeto
+        -4 Multiplicar propiedades numéricas por 2`));
+
+        switch (opcion) {
+            case 1:
+                cargar("ejercicio1.js");
+                break;
+            case 2:
+                cargar("ejercicio2.js");
+                break;
+            case 3:
+                cargar("ejercicio3.js");
+                break;
+            case 4:
+                cargar("ejercicio4.js");
+                break;
+            default:
+                alert("Opción no válida, recarga la página");
+        }
+    </script>
 </head>
 
 <body>

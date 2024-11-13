@@ -9,4 +9,4 @@ for (keys in salaries) {
     sum += salaries[keys];
 }
 
-console.log(sum > 0 ? sum : 0);
+console.log(`La suma total es: ${sum > 0 ? sum : 0}`);

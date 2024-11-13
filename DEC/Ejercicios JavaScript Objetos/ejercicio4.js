@@ -13,4 +13,4 @@ function multiplyNumeric(obj){
 }
 
 multiplyNumeric(menu);
-console.log(`${menu.width} ${menu.height}`);
+console.log(`Width: ${menu.width}, Height: ${menu.height}`);
