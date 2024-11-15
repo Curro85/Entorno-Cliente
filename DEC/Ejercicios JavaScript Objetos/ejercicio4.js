@@ -5,12 +5,13 @@ const menu = {
 };
 
 function multiplyNumeric(obj){
-    for (key in obj) {
-        if (typeof(obj[key]) == "number") {
-            obj[key] *= 2;
+    for (propiedad in obj) {
+        if (typeof(obj[propiedad]) == "number") {
+            obj[propiedad] *= 2;
         }
     }
 }
 
+console.log(`Width: ${menu.width}, Height: ${menu.height}, Title: ${menu.title}`);
 multiplyNumeric(menu);
-console.log(`Width: ${menu.width}, Height: ${menu.height}`);
+console.log(`Width: ${menu.width}, Height: ${menu.height}, Title: ${menu.title}`);
