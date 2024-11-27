@@ -11,21 +11,21 @@
 
 <body>
     <div id="form">
-        <form action="formulario.html" method="post">
+        <form action="#" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" required>
 
-            <label for="correo">E-Mail:</label>
-            <input type="text" id="correo" required>
+            <label for="correo">E-Mail: <span id="span_correo"></span></label>
+            <input type="text" id="correo" onchange="validarCorreo()" required>
 
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" required>
+            <label for="password">Contraseña: <span id="span_pass"></span></label>
+            <input type="password" id="password" onchange="validarPass()" required>
 
-            <label for="password_val">Repetir contraseña:</label>
-            <input type="password" id="password_val" required>
+            <label for="password_val">Repetir contraseña: <span id="span_pass_val"></span></label>
+            <input type="password" id="password_val" onchange="comprobarPass()" required>
 
-            <label for="suma" id="labelSuma"></label>
-            <input type="text" id="suma" required>
+            <label for="suma" id="labelSuma"> <span id="span_suma"></span></label>
+            <input type="text" id="suma" onchange="comprobarSuma()" required>
 
             <label for="condiciones">Acepto las condiciones</label>
             <input type="checkbox" id="condiciones" required>
