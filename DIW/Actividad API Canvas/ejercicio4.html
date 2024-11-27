@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un aro o circunferencia</title>
+</head>
+
+<body>
+    <h1>Circunferencia</h1>
+    <canvas id="aro" width="400" height="400" style="border: 1px solid black;"></canvas>
+
+    <script>
+        const canvas = document.getElementById("aro");
+        const context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.arc(200, 200, 100, 0, 2 * Math.PI);
+        context.lineWidth = 2;
+        context.strokeStyle = "red";
+        context.stroke();
+    </script>
+</body>
+
+</html>

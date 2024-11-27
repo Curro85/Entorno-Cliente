@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectángulo relleno</title>
+</head>
+<body>
+    <h1>Rectángulo relleno</h1>
+    <canvas id="rec_relleno" width="300" height="200" style="border: 1px solid black"></canvas>
+
+    <script>
+        const canvas = document.getElementById("rec_relleno");
+        const context = canvas.getContext("2d");
+
+        context.fillStyle = "green";
+        context.fillRect(50, 50, 150, 100);
+    </script>
+</body>
+</html>
