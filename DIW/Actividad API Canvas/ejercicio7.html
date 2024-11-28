@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elipse</title>
+    <title>Elipse rellena</title>
 </head>
 <body>
-    <h1>Elipse</h1>
+    <h1>Elipse rellena</h1>
     <canvas id="elipse" width="400" height="200" style="border: 1px solid black"></canvas>
+
 
     <script>
         const canvas = document.getElementById("elipse");
         const context = canvas.getContext("2d");
 
         context.beginPath();
-        context.lineWidth = 2;
-        context.strokeStyle = "blue";
         context.ellipse(200, 100, 100, 60, 0, 0, Math.PI * 2, false);
-        context.stroke();
+        context.fillStyle = "red";
+        context.fill();
     </script>
 </body>
 </html>

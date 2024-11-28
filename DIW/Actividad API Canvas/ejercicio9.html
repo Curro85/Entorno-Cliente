@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triángulo relleno</title>
+</head>
+<body>
+    <h1>Triángulo relleno</h1>
+    <canvas id="triangulo" width="300" height="200" style="border: 1px solid black"></canvas>
+
+    <script>
+        const canvas = document.getElementById("triangulo");
+        const context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(50, 50);
+
+        context.lineTo(200,50);
+        context.lineTo(50,150);
+        context.lineTo(50,50);
+
+        context.fillStyle = "blue";
+        context.fill();
+    </script>
+</body>
+</html>
