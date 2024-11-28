@@ -20,7 +20,6 @@ function generarSuma() {
 function aceptarCond() {
     const checkbox = document.getElementById('condiciones');
     const btn = document.getElementById('btnSubmit');
-    console.log(checkbox)
     checkbox.addEventListener('change', function () {
         btn.disabled = !checkbox.checked;
     });
@@ -75,7 +74,6 @@ function comprobarPass() {
 
 function comprobarSuma() {
     const sumaInput = document.getElementById('suma');
-    const spanSuma = document.getElementById('span_suma');
     console.log(sumaInput.value);
 
     if (!(suma == sumaInput.value)) {

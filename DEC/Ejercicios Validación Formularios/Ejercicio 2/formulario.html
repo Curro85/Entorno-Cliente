@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+    <script type="text/javascript" src="js/formulario.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="form">
+        <form action="index.html" method="get">
+            <label for="nombre">Nombre de usuario: <span id="span_nombre"></span></label>
+            <input type="text" id="nombre" placeholder="John Doe" onchange="validarNombre()" required>
+
+            <label for="password">Contraseña: <span id="span_pass"></span></label>
+            <input type="password" id="password" onchange="validarPass()" placeholder="Contraseña" required>
+
+            <label for="municipio">Municipio: </label>
+            <select name="municipio" id="municipio" onchange="validarMunicipio()" required>
+                <optgroup label="Municipios">
+                    <option value="vacio">-Seleccione-</option>
+                    <option value="cadiz">Cádiz</option>
+                    <option value="chiclana">Chiclana de la Frontera</option>
+                    <option value="elpuerto">El Puerto de Santa María</option>
+                    <option value="jerez">Jerez de la Frontera</option>
+                    <option value="sanlucar">Sanlúcar</option>
+                </optgroup>
+            </select>
+
+            <button type="submit" id="btnSubmit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>
