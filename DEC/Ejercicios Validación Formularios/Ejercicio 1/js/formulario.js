@@ -45,9 +45,9 @@ function validarPass() {
     const pass = document.getElementById('password');
     const spanPass = document.getElementById('span_pass');
     let passRegExp = /^(?=.*\d).{8,15}$/;
-    
+
     if (!passRegExp.test(pass.value)) {
-        spanPass.innerText = 'La constraseña debe ser mínimo de 8 caracteres e incluir un número.'
+        spanPass.innerText = 'Mínimo 8 caracteres y un número.'
         pass.classList.add('error');
         pass.value = '';
         pass.focus();

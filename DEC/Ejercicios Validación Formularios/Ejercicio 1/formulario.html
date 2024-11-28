@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulario 1</title>
     <script type="text/javascript" src="js/formulario.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div id="form">
-        <form action="#" method="post">
+        <form action="index.html" method="get">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
+            <input type="text" id="nombre" placeholder="John Doe" required>
 
             <label for="correo">E-Mail: <span id="span_correo"></span></label>
-            <input type="text" id="correo" onchange="validarCorreo()" required>
+            <input type="text" id="correo" onchange="validarCorreo()" placeholder="ejemplo@gmail.com" required>
 
             <label for="password">Contraseña: <span id="span_pass"></span></label>
-            <input type="password" id="password" onchange="validarPass()" required>
+            <input type="password" id="password" onchange="validarPass()" placeholder="Contraseña" required>
 
             <label for="password_val">Repetir contraseña: <span id="span_pass_val"></span></label>
-            <input type="password" id="password_val" onchange="comprobarPass()" required>
+            <input type="password" id="password_val" onchange="comprobarPass()" placeholder="Repetir contraseña" required>
 
             <label for="suma" id="labelSuma"> <span id="span_suma"></span></label>
-            <input type="text" id="suma" onchange="comprobarSuma()" required>
+            <input type="text" id="suma" onchange="comprobarSuma()" placeholder="Resultado de la suma" required>
 
             <label for="condiciones">Acepto las condiciones</label>
             <input type="checkbox" id="condiciones" required>
