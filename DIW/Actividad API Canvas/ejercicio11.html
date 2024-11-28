@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico</title>
+</head>
+
+<body>
+    <h1>Gráfico en canvas</h1>
+    <canvas id="grafico" width="550" height="350" style="border: 1px solid black"></canvas>
+
+    <script>
+        const canvas = document.getElementById("grafico");
+        const context = canvas.getContext("2d");
+
+        let grdCielo = context.createLinearGradient(0, 0, 0, 250);
+        grdCielo.addColorStop(0, "skyblue");
+        grdCielo.addColorStop(1, "white");
+        context.fillStyle = grdCielo;
+        context.fillRect(0, 0, 550, 350);
+
+        let grdSuelo = context.createLinearGradient(0, 200, 0, 400);
+        grdSuelo.addColorStop(0, "darkgreen");
+        grdSuelo.addColorStop(1, "white");
+        context.fillStyle = grdSuelo;
+        context.fillRect(0, 230, 550, 150);
+
+        let grdMonte = context.createLinearGradient(0, 0, 0, 250);
+        grdMonte.addColorStop(0, "burlywood");
+        grdMonte.addColorStop(1, "brown");
+        context.beginPath();
+        context.moveTo(0, 230);
+        context.lineTo(80, 60);
+        context.lineTo(120, 180);
+        context.lineTo(200, 40);
+        context.lineTo(300, 160);
+        context.lineTo(360, 80);
+        context.lineTo(550, 230);
+        context.fillStyle = grdMonte
+        context.fill();
+        context.closePath();
+
+        let grdNube = context.createRadialGradient(0, 10, 400, 10, 60, 100);
+        grdNube.addColorStop(0, "lightblue");
+        grdNube.addColorStop(1, "blue");
+        context.beginPath();
+        context.moveTo(140, 100);
+        context.bezierCurveTo(120, 80, 160, 60, 200, 100);
+        context.bezierCurveTo(220, 60, 260, 80, 240, 100);
+        context.bezierCurveTo(260, 120, 220, 140, 200, 120);
+        context.bezierCurveTo(160, 140, 120, 120, 140, 100);
+        context.fillStyle = grdNube
+        context.fill();
+        context.closePath();
+
+        y = 0;
+        for (let j = 1; j <= 3; j++) {
+            x = 0;
+            for (let i = 1; i <= 5; i++) {
+                context.beginPath();
+                context.moveTo(150 + x, 150 + y);
+                context.lineTo(170 + x, 170 + y);
+                context.strokeStyle = "blue";
+                context.stroke();
+                context.closePath();
+                x += 20;
+            }
+            y += 30;
+        }
+
+        context.beginPath();
+        context.font = "30px Arial";
+        context.fillStyle = "yellow";
+        context.fillText("Canvas", 10, 30);
+        context.closePath();
+
+    </script>
+</body>
+
+</html>
