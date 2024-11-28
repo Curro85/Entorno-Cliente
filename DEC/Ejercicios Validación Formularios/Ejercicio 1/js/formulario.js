@@ -1,8 +1,8 @@
 let suma = 0;
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     generarSuma();
     aceptarCond();
-});
+})
 
 function generarSuma() {
     const label = document.getElementById('labelSuma');
