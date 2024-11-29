@@ -23,16 +23,16 @@ function descifrar() {
 
     let letras_esp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
         'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ]
+    ];
 
     let letras_eng = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
         'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ]
+    ];
 
     let especiales = ['!', '¡', '¿', '?', '@', '#', ',', '.', '-', '_',
         '%', '$', '(', ')', '=', '&', '/', '{', '}', '[', ']', 'Á', 'É',
         'Í', 'Ó', 'Ú'
-    ]
+    ];
 
     let resultado = '';
 
@@ -44,7 +44,7 @@ function descifrar() {
                         indice = letras_esp.length + j;
                         j = indice;
                     }
-                    resultado += `${letras_esp[j - nivel_rotado]}`
+                    resultado += `${letras_esp[j - nivel_rotado]}`;
                 }
             }
 
@@ -64,7 +64,7 @@ function descifrar() {
                         indice = letras_eng.length + j;
                         j = indice;
                     }
-                    resultado += `${letras_eng[j - nivel_rotado]}`
+                    resultado += `${letras_eng[j - nivel_rotado]}`;
                 }
             }
             if (texto[i] == ' ') {
