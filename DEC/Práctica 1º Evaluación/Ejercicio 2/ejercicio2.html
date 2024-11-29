@@ -10,7 +10,7 @@
 
 <body>
     <h1>Configuración de usuario</h1>
-    <form action="cambia_cuenta.php" method="post">
+    <form action="cambia_cuenta.php" method="post" onsubmit="validarForm(event)">
         <h2>Inicio de sesión</h2>
         <p>¿Cuando quieres que Windows te vuelva a pedir que inicies sesión? <select name="estado" id="estado">
                 <option value="suspendido">Cuando el PC se activa tras haber estado en suspensión</option>
@@ -36,7 +36,7 @@
         <label for="privacidad">Mostrar detalles de la cuenta en la pantalla de inicio de sesión</label>
         <p></p>
 
-        <button type="submit" onclick="validarForm()">Aceptar</button>
+        <button type="submit">Aceptar</button>
     </form>
 </body>
 
