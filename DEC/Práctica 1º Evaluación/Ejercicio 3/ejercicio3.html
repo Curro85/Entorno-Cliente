@@ -11,6 +11,8 @@
 <body>
     <h1>Cifrado de César</h1>
     <h2>-Descifrar-</h2>
+    
+    <!--Si cambia el valor del campo select, cambio el valor del input de rotación-->
     <p>Alfabeto <select name="alfabeto" id="alfabeto" onchange="setRotacion()">
             <option value="esp">Castellano</option>
             <option value="eng">Inglés</option>
@@ -24,9 +26,11 @@
     <input type="number" id="nivel" min="0">
     <p></p>
 
+    <!--Al hacer click ejecuto la función descifrar-->
     <button id="descifrar" onclick="descifrar()">Descifrar</button>
     <p id="resultado" style="color: red;"></p>
 
+    <!--Con este script cargo los valores por defecto del input de rotación-->
     <script>
         window.onload = setRotacion();
     </script>
