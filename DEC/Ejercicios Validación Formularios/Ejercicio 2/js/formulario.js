@@ -1,3 +1,9 @@
+/**
+ * Esta función valida que el nombre de usuario introducido
+ * contenga mínimo 8 caracteres y no tenga espacios
+ * a través de una expresión regular.
+ * En caso de error muestra un mensaje indicando las condiciones.
+ */
 function validarNombre() {
     const nombre = document.getElementById('nombre');
     const spanNombre = document.getElementById('span_nombre');
@@ -12,6 +18,12 @@ function validarNombre() {
     }
 }
 
+/**
+ * Esta función valida que la contraseña introducida tenga una
+ * longitud de 6 a 10 caracteres, un número y una mayúscula, sin símbolos
+ * a través de una expresión regular.
+ * En caso de error muestra un mensaje indicando los requisitos.
+ */
 function validarPass() {
     const password = document.getElementById('password');
     const spanPass = document.getElementById('span_pass');
