@@ -35,7 +35,7 @@ function validarForm(event) {
         return false;
     }
 
-    // Si todo está correcto se hace submit y se reinicia los campos y envia los datos
+    // Si todo está correcto se hace submit, se reinicia los campos y envia los datos
     event.target.submit();
     indicio.value = '';
     checkbox.checked = false;
