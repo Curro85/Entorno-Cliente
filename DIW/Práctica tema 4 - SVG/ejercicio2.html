@@ -8,7 +8,30 @@
 </head>
 
 <body>
-    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <h2>Casita</h2>
+    <!--Uso la etiqueta svg para crear un "lienzo" en el que hacer la casita-->
+    <svg class="house" width="300" height="300" xmlns="http://www.w3.org/2000/svg" style="background-color:aquamarine">
+        <!--Con polygon creo la estructura base de la casa a la cual le iremos agregando los demas elementos-->
+        <polygon points="150,40 50,140 50,260 250,260 250,140" stroke="black" stroke-width="2px" fill="white" />
+        <!--Con polyline creo el tejado-->
+        <polyline points="40,140 150,30 260,140" stroke="#b22222" stroke-width="12px" stroke-linecap="round" fill="none" />
+
+        <!--Este bloque creo los rectángulos para la puerta y las escaleras, y el círculo para el pomo-->
+        <rect x="80" y="170" rx="4" width="40" height="80" stroke="black" stroke-width="2px" fill="#b22222" />
+        <rect x="72" y="248" width="55" height="5" stroke="black" stroke-width="2px" fill="grey" />
+        <rect x="70" y="253" width="60" height="7" stroke="black" stroke-width="2px" fill="grey" />
+        <circle cx="90" cy="212" r="3" stroke="black" stroke-width="2px" fill="#f0e68c" />
+
+        <!--En este bloque creo un círculo para hacer la ventana superior con sus respectivas líneas-->
+        <circle cx="150" cy="120" r="25" stroke="black" stroke-width="2px" fill="#f0e68c" />
+        <line x1="125" y1="120" x2="175" y2="120" stroke="black" stroke-width="2px" />
+        <line x1="150" y1="95" x2="150" y2="145" stroke="black" stroke-width="2px" />
+
+        <!--En este bloque creo dos rectángulos uno para el poyete y otro para la ventana con sus respectivas líneas-->
+        <rect x="160" y="175" rx="5" width="50" height="40" stroke="black" stroke-width="2px" fill="#f0e68c" />
+        <rect x="152" y="214" rx="6" width="65" height="6" stroke="black" stroke-width="2px" fill="#b22222" />
+        <line x1="160" y1="195" x2="210" y2="195" stroke="black" stroke-width="2px" />
+        <line x1="185" y1="175" x2="185" y2="215" stroke="black" stroke-width="2px" />
     </svg>
 </body>
 
