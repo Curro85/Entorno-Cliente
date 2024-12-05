@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form id="form" onsubmit="validacion()">
+    <form id="form" onsubmit="validacion(event)">
         <fieldset>
             <legend>Datos Personales</legend>
             <p>
@@ -25,8 +25,8 @@
 
             <p>
                 <label for="direccion">Dirección:</label>
-                <input type="text" name="direccion" id="direccion" size="50"
-                    placeholder="Calle o plaza, número y piso.">
+                <input type="text" name="direccion" id="direccion" size="50" placeholder="Calle o plaza, número y piso."
+                    required> *
             </p>
 
             <p>
@@ -46,13 +46,12 @@
 
             <p>
                 Sexo:<br>
-                <input type="radio" name="sexo" id="varon" value="varon">
+                <input type="radio" name="sexo" id="varon" value="varon" checked>
                 <label for="varon">Varón</label><br>
 
                 <input type="radio" name="sexo" id="mujer" value="mujer">
                 <label for="mujer">Mujer</label>
             </p>
-
         </fieldset>
         <br>
         <fieldset>
@@ -77,20 +76,20 @@
 
             <p>
                 Recibir artículos sobre los siguientes temas:<br>
-                <input type="checkbox" name="musica" id="musica" value="musica">
+                <input type="checkbox" name="intereses" id="musica" value="musica">
                 <label for="musica">Música</label><br>
 
-                <input type="checkbox" name="deportes" id="deportes" value="deportes">
+                <input type="checkbox" name="intereses" id="deportes" value="deportes">
                 <label for="deportes">Deportes</label><br>
 
-                <input type="checkbox" name="cine" id="cine" value="cine">
+                <input type="checkbox" name="intereses" id="cine" value="cine">
                 <label for="cine">Cine</label><br>
 
-                <input type="checkbox" name="libros" id="libros" value="libros">
+                <input type="checkbox" name="intereses" id="libros" value="libros">
                 <label for="libros">Libros</label><br>
 
-                <input type="checkbox" name="Ciencia" id="Ciencia" value="Ciencia">
-                <label for="Ciencia">Ciencia</label><br>
+                <input type="checkbox" name="intereses" id="ciencia" value="ciencia">
+                <label for="ciencia">Ciencia</label><br>
             </p>
         </fieldset>
         <br>
@@ -122,8 +121,8 @@
         <fieldset>
             <legend>Comenzar de nuevo</legend>
             <p>
-                Borrar todos los datos del formulario y volver a empezar:<br>
-                <button type="button" id="borrar">Borrar todo</button>
+                Borrar todos los datos del formulario y volver a empezar:<br><br>
+                <button type="button" id="borrar" onclick="borrarForm()">Borrar todo</button>
             </p>
         </fieldset>
         <br>
@@ -131,7 +130,7 @@
             <legend>Enviar</legend>
             <p>
                 Enviar formulario por correo electrónico. Al pulsar el botón se abrirá
-                la página de envío de correo: en esa página pulsa enviar:<br>
+                la página de envío de correo: en esa página pulsa enviar:<br><br>
                 <button type="submit" id="enviar">Enviar por correo</button>
             </p>
         </fieldset>
