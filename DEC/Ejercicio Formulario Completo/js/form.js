@@ -1,11 +1,13 @@
 function validacion(event) {
+    // Evito que el formulario se envie de forma predeterminada.
     event.preventDefault();
 
+    // Creo estas variables para almacenar los errores, y el mensaje de alerta.
     let errores = [];
     let enfocar = [];
     let alerta = "";
 
-
+    // Constantes con los elementos a validar y las expresiones regulares para validarlos.
     const nombre = document.getElementById('nombre');
     const ape1 = document.getElementById('ape1');
     const ape2 = document.getElementById('ape2');
@@ -20,6 +22,7 @@ function validacion(event) {
     const password = document.getElementById('password');
     let passRegExp = /^(?=.*[A-Z])(?=.*\d).{8,}$/
 
+    // Creo varias condicionales para validar los campos, en caso de que de error se almacena en el array de errores y de enfocar.
     if (!nombreRegExp.test(nombre.value)) {
         errores.push("El nombre solo puede tener letras y espacios.");
         enfocar.push(nombre);
@@ -50,21 +53,25 @@ function validacion(event) {
         enfocar.push(password);
     }
 
+    // Recorro el array de errores y voy almacenando el error en el mensaje de alerta que mostraré despues.
     for (let x in errores) {
         alerta += `${errores[x]}\n`;
     }
 
+    // Si hay mínimo un error, muestro el mensaje de alerta, y le doy el foco al elemento que dió el error.
     if (errores.length > 0) {
         alert(alerta);
         enfocar[0].focus();
         enfocar[0].select();
         return;
     }
+    // Si todo está correcto, se envía el formulario y muestro una ventana indicándolo.
     event.target.submit();
     return alert("Datos enviados correctamente.");
 }
 
 function borrarForm() {
+    // Tomo todos los elementos del DOM que voy a reiniciar.
     const nombre = document.getElementById('nombre');
     const ape1 = document.getElementById('ape1');
     const ape2 = document.getElementById('ape2');
@@ -74,8 +81,10 @@ function borrarForm() {
     const password = document.getElementById('password')
     const opinion = document.getElementById('opinion');
 
+    // Los almaceno en un array para recorrerlos y borrarlos.
     let varForm = [nombre, ape1, ape2, direccion, tlf, email, password, opinion];
 
+    // Recorro el array y asigno su valor a vacío.
     for (let x in varForm) {
         varForm[x].value = "";
     }
