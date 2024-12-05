@@ -58,7 +58,7 @@ function validacion(event) {
         alerta += `${errores[x]}\n`;
     }
 
-    // Si hay mínimo un error, muestro el mensaje de alerta, y le doy el foco al elemento que dió el error.
+    // Si hay mínimo un error, muestro el mensaje de alerta, y le doy el foco al elemento que dió el primer error.
     if (errores.length > 0) {
         alert(alerta);
         enfocar[0].focus();
