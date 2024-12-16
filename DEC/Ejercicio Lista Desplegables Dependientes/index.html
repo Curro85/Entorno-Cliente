@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas desplegables dependientes</title>
+    <script type="text/javascript" src="js/listas.js" defer></script>
+
+</head>
+
+<body>
+    <label for="provincias">Seleccione su provincia:</label>
+    <select name="provincias" id="provincias" onchange="listarMun()" required>
+        <option value="provincias" selected disabled>Provincias</option>
+    </select>
+    <br><br>
+
+    <label for="municipios">Seleccione su municipio:</label>
+    <select name="municipios" id="municipios" disabled required>
+        <option value="municipios" selected disabled>Municipios</option>
+    </select>
+    <br><br>
+
+    <button type="submit" onclick="enviar()">Enviar</button>
+</body>
+
+</html>
