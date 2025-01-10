@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ej8</title>
-</head>      
+    <title>Ej8</title>
+</head>
+
 <body>
     <p>
         <label for="valor1">Ingrese primer valor:</label>
@@ -17,12 +19,12 @@
     </p>
     <p>
         <select id="operacion">
-        <option value="suma">Sumar</option>
-        <option value="resta">Restar</option>
+            <option value="suma">Sumar</option>
+            <option value="resta">Restar</option>
         </select>
     </p>
     <p>
-        <input type="button" value="Operar" id="calculo" />
+        <input type="button" onclick="operar()" value="Operar" id="calculo" />
     </p>
     <p id="resultado1"></p>
     <select multiple="multiple" id="operaciones">
@@ -30,9 +32,41 @@
         <option value="resta">Restar</option>
     </select>
     <p>
-        <input type="button" value="Operar" id="calculomultiple" />
+        <input type="button" onclick="operar2()" value="Operar" id="calculomultiple" />
     </p>
     <p id="resultado2"></p>
+
+    <script>
+        function operar() {
+            let resultado1 = document.getElementById('resultado1');
+            let x = Number(document.getElementById('valor1').value);
+            let y = Number(document.getElementById('valor2').value);
+
+            let eleccion = document.getElementById('operacion').value;
+
+            if (eleccion == 'suma') {
+                resultado1.innerText = `La suma de ${x} y ${y} es: ${x + y}`;
+            } else if (eleccion == 'resta') {
+                resultado1.innerText = `La resta de ${x} y ${y} es: ${x - y}`;
+            }
+
+        }
+
+        function operar2() {
+            let resultado2 = document.getElementById('resultado2');
+            let x = Number(document.getElementById('valor1').value);
+            let y = Number(document.getElementById('valor2').value);
+
+            let opcion = document.getElementById('operaciones').value;
+
+            if (opcion == 'suma') {
+                resultado2.innerText = `La suma de ${x} y ${y} es: ${x + y}`;
+            } else if (opcion == 'resta') {
+                resultado2.innerText = `La resta de ${x} y ${y} es: ${x - y}`;
+            }
+
+        }
+    </script>
 </body>
 
 </html>

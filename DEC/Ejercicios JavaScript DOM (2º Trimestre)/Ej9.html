@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ej9</title>
-</head>      
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ej9</title>
+</head>
+
 <body>
-    <p>
-      <label for="comentarios">Ingrese sus comentarrios</label>
-    </p>
-    <p>
-      <textarea name="comentarios" id="comentarios" cols="30" rows="10" maxlength="50"></textarea>
-    </p>
-    <p>
-      <span>Caracteres posibles:</span>
-      <span id="resultado">50</span>
-    </p>
-  </body>
-  
-  </html>
+  <p>
+    <label for="comentarios">Ingrese sus comentarrios</label>
+  </p>
+  <p>
+    <textarea name="comentarios" id="comentarios" cols="30" rows="10" maxlength="50"></textarea>
+  </p>
+  <p>
+    <span>Caracteres posibles:</span>
+    <span id="resultado">50</span>
+  </p>
+
+  <script>
+    let textarea = document.getElementById('comentarios');
+    let resultado = document.getElementById('resultado');
+    let longitud = textarea.getAttribute('maxlength');
+
+    resultado.innerText = longitud;
+
+    textarea.addEventListener('input', function () {
+      let restante = longitud - textarea.value.length;
+      resultado.innerText = restante;
+    })
+  </script>
+</body>
+
+</html>

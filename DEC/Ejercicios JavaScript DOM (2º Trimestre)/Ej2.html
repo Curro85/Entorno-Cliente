@@ -51,18 +51,22 @@
 
     <script>
         let enlaces = document.getElementsByTagName('a');
-        console.log(`El número de enlaces es de ${enlaces.length}`);
+        console.log(`El número de enlaces es de: ${enlaces.length} enlaces.`);
 
         let penultimo = enlaces.length - 2;
         console.log(`El penúltimo enlace es: ${enlaces[penultimo].href}`);
 
         let numEnlaces = 0;
         for (let i = 0; i < enlaces.length; i++) {
-            if (enlaces[i].href == "http://prueba") {
-                numEnlaces ++;
+            if (enlaces[i].getAttribute('href') == 'http://prueba') {
+                numEnlaces++;
             }
         }
-        console.log(numEnlaces);
+        console.log(`El total de enlaces "http://prueba" es de : ${numEnlaces} enlaces.`);
+
+        let parrafos = document.getElementsByTagName('p');
+        let numEnlacesParrafo = parrafos[2].getElementsByTagName('a').length;
+        console.log(`El número de enlaces del tercer párrafo es de: ${numEnlaces} enlaces.`);
     </script>
 </body>
 

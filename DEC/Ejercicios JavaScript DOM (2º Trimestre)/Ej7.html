@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ej7</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ej7</title>
 </head>
+
 <body>
   <p>
     <label for="valor1">Ingrese primer valor:</label>
@@ -22,10 +24,30 @@
     <input type="checkbox" value="resta" id="resta" />Restar
   </p>
   <p>
-    <input type="button" value="Operar" id="calculo" />
+    <input type="button" onclick="operar()" value="Operar" id="calculo" />
   </p>
   <p id="resultado"></p>
-  
+
+  <script>
+    function operar() {
+      let resultado = document.getElementById('resultado');
+      let x = Number(document.getElementById('valor1').value);
+      let y = Number(document.getElementById('valor2').value);
+      let suma = document.getElementById('suma');
+      let resta = document.getElementById('resta');
+
+
+      if (suma.checked) {
+        resultado.innerText = `La suma de ${x} y ${y} es: ${x + y}`;
+      }
+      if (resta.checked && suma.checked) {
+        resultado.innerText += ` - La resta es: ${x - y}`;
+      } else if (resta.checked) {
+        resultado.innerText = `La resta es: ${x - y}`;
+      }
+    }
+  </script>
+
 </body>
 
 </html>
