@@ -11,12 +11,15 @@
             let primero = document.getElementById('primero');
             let segundo = document.getElementById('segundo');
 
+            let resultado = document.getElementById('resultado');
+
             function randomNum() {
                 return (Math.floor(Math.random() * 10))
             }
 
             primero.innerText = randomNum();
             segundo.innerText = randomNum();
+            resultado.innerText = '';
         }
 
         function compara() {
