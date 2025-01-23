@@ -35,10 +35,10 @@
 					zona = 'Inferior izquierda';
 				}
 			} else {
-				if (posicion[1] > tamanoVentanaNavegador()[1] / 2) {
-					zona = 'Inferior derecha';
-				} else {
+				if (posicion[1] < tamanoVentanaNavegador()[1] / 2) {
 					zona = 'Superior derecha';
+				} else {
+					zona = 'Inferior derecha';
 				}
 			}
 
