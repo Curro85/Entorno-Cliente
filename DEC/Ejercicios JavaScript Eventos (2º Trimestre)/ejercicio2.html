@@ -50,14 +50,18 @@
 		}
 
 		function pulsarRaton(event) {
+			let mensaje = [
+				'Ratón',
+				`Navegador: [${event.clientX}, ${event.clientY}]`,
+				`Pagina: [${event.pageX}, ${event.pageY}]`
+			]
+			muestraInformacion(mensaje);
 			document.getElementById('info').style.backgroundColor = '#FFFFCC';
 		}
 
-		window.onload = function () {
-			document.addEventListener('mousemove', moverRaton);
-			document.addEventListener('keydown', mostrarTecla);
-			document.addEventListener('mousedown', pulsarRaton);
-		}
+		document.onmousemove = moverRaton;
+		document.onkeydown = mostrarTecla;
+		document.onmousedown = pulsarRaton;
 	</script>
 </head>
 
