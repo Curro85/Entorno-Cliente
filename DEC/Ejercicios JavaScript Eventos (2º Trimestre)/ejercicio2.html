@@ -1,0 +1,71 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Ejercicio 15 - Información sobre eventos</title>
+	<style type="text/css">
+		body {
+			font-family: arial, helvetica;
+		}
+
+		#info {
+			width: 160px;
+			border: thin solid silver;
+			padding: .5em;
+			position: fixed;
+		}
+
+		#info h1 {
+			margin: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		function muestraInformacion(mensaje) {
+			document.getElementById("info").innerHTML = '<h1>' + mensaje[0] + '</h1>';
+			for (var i = 1; i < mensaje.length; i++) {
+				document.getElementById("info").innerHTML += '<p>' + mensaje[i] + '</p>';
+			}
+		}
+
+		function moverRaton(event) {
+			let mensaje = [
+				'Ratón',
+				`Navegador: [${event.clientX}, ${event.clientY}]`,
+				`Pagina: [${event.pageX}, ${event.pageY}]`
+			];
+			muestraInformacion(mensaje);
+			document.getElementById('info').style.backgroundColor = '#FFFFFF';
+		}
+
+		function mostrarTecla(event) {
+			let mensaje = [
+				'Teclado',
+				`Carácter: [${event.key}]`,
+				`Código: [${event.keyCode}]`
+			];
+			muestraInformacion(mensaje);
+			document.getElementById('info').style.backgroundColor = '#CCE6FF';
+		}
+
+		function pulsarRaton(event) {
+			document.getElementById('info').style.backgroundColor = '#FFFFCC';
+		}
+
+		window.onload = function () {
+			document.addEventListener('mousemove', moverRaton);
+			document.addEventListener('keydown', mostrarTecla);
+			document.addEventListener('mousedown', pulsarRaton);
+		}
+	</script>
+</head>
+
+<body>
+	<div id="info"></div>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+
+</html>
