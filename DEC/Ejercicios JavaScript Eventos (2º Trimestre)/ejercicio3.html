@@ -26,16 +26,17 @@
 			var evento = elEvento || window.event;
 
 			let posicion = [evento.clientX, evento.clientY];
+			let ventana = tamanoVentanaNavegador();
 			let zona = '';
 
-			if (posicion[0] < tamanoVentanaNavegador()[0] / 2) {
-				if (posicion[1] < tamanoVentanaNavegador()[1] / 2) {
+			if (posicion[0] < ventana[0] / 2) {
+				if (posicion[1] < ventana[1] / 2) {
 					zona = 'Superior izquierda';
 				} else {
 					zona = 'Inferior izquierda';
 				}
 			} else {
-				if (posicion[1] < tamanoVentanaNavegador()[1] / 2) {
+				if (posicion[1] < ventana[1] / 2) {
 					zona = 'Superior derecha';
 				} else {
 					zona = 'Inferior derecha';
