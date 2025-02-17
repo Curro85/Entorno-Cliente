@@ -1,0 +1,52 @@
+body {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+#sobre-mi {
+    padding: 60px 0;
+}
+
+#sobre-mi h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#sobre-mi p {
+    font-size: 1.2rem;
+}
+
+
+#experiencia .card {
+    transition: transform 0.3s ease;
+}
+
+#experiencia .card:hover {
+    transform: scale(1.05);
+}
+
+
+#proyectos .card {
+    margin-bottom: 30px;
+}
+
+
+#testimonios .carousel-item {
+    text-align: center;
+    font-style: italic;
+}
+
+#testimonios footer {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contacto .btn {
+    margin: 5px;
+}
+
+#contacto p {
+    font-size: 1.2rem;
+}
