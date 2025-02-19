@@ -1,3 +1,11 @@
+@keyframes borde-color {
+    0% {border-color: none;}
+    25% {border-color: red;}
+    50% {border-color: green;}
+    75% {border-color: purple;}
+    100% {border-color: blue;}
+}
+
 body {
     background-image: url('../images/bg.jpg');
     background-repeat: no-repeat;
@@ -25,6 +33,9 @@ body {
 
 #experiencia .card:hover {
     transform: scale(1.05);
+    animation-name: borde-color;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 
@@ -49,4 +60,12 @@ body {
 
 #contacto p {
     font-size: 1.2rem;
+}
+
+.carousel-control-next-icon {
+    filter: invert(100) sepia(1) saturate(5) hue-rotate(200deg);
+}
+
+.carousel-control-prev-icon {
+    filter: invert(100) sepia(1) saturate(5) hue-rotate(200deg);
 }
