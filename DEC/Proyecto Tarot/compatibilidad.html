@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/compatibilidad.css">
     <script type="text/javascript" src="js/compatibilidad.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <title>Mystic Vibes - Compatibilidad</title>
 </head>
 
@@ -25,11 +26,16 @@
             <!-- Carrito y Usuario -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span
-                            class="badge bg-danger">0</span></a>
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span class="badge bg-danger">0</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-user-circle"></i> Mi cuenta</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i> <span id="userName">Mi cuenta</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+                        <li><a class="dropdown-item" href="login.html" id="loginOption">Iniciar sesión</a></li>
+                        <li><a class="dropdown-item d-none" href="#" id="logoutOption">Cerrar sesión</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -44,22 +50,25 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#horoscopo">Horóscopo</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#compatibilidad">Compatibilidad Zodiacal</a>
+                        <a class="nav-link" href="calcular_carta_astral.html">Horóscopo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tarot">Tarot Sí o No</a>
+                        <a class="nav-link" href="compatibilidad.html">Compatibilidad Zodiacal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#numerologia">Numerología</a>
+                        <a class="nav-link" href="tirada.html">Tarot Sí o No</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cursos">Cursos</a>
+                        <a class="nav-link" href="numerologia.html">Numerología</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tienda">Tienda</a>
+                        <a class="nav-link" href="cursos.html">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
                     </li>
                 </ul>
 
@@ -71,23 +80,46 @@
             </div>
         </div>
     </nav>
-
-    <div class="zodiac-container mx-auto">
-        <button class="zodiac-section" style="--i: 0;" value="aries"><span class="zodiac-text">Aries</span></button>
-        <button class="zodiac-section" style="--i: 1;" value="tauro"><span class="zodiac-text">Tauro</span></button>
-        <button class="zodiac-section" style="--i: 2;" value="geminis"><span class="zodiac-text">Géminis</span></button>
-        <button class="zodiac-section" style="--i: 3;" value="cancer"><span class="zodiac-text">Cáncer</span></button>
-        <button class="zodiac-section" style="--i: 4;" value="leo"><span class="zodiac-text">Leo</span></button>
-        <button class="zodiac-section" style="--i: 5;" value="virgo"><span class="zodiac-text">Virgo</span></button>
-        <button class="zodiac-section" style="--i: 6;" value="libra"><span class="zodiac-text">Libra</span></button>
-        <button class="zodiac-section" style="--i: 7;" value="escorpio"><span class="zodiac-text">Escorpio</span></button>
-        <button class="zodiac-section" style="--i: 8;" value="sagitario"><span class="zodiac-text">Sagitario</span></button>
-        <button class="zodiac-section" style="--i: 9;" value="capricornio"><span class="zodiac-text">Capricornio</span></button>
-        <button class="zodiac-section" style="--i: 10;" value="acuario"><span class="zodiac-text">Acuario</span></button>
-        <button class="zodiac-section" style="--i: 11;" value="piscis"><span class="zodiac-text">Piscis</span></button>
+    <!-- Imagen del círculo de signos -->
+    <div class="container mx-auto text-center mt-3 mb-3">
+        <img src="https://www.goodvinilos.com/60999/vinilo-circulo-signos-del-zodiaco.jpg" height="500">
     </div>
-    <div class="mx-auto">
-        <button onclick="listar()" class="btn btn-outline-light">Comprobar compatibilidad</button>
+    <!-- Div con los selectores de signos del zodiaco -->
+    <div class="container mx-auto text-center mb-3" id="seleccion">
+        <label for="signo">Seleccione los signos a comprobar:</label>
+        <select class="form-select mb-2" name="signo" id="signo_1">
+            <option value="aries">Aries</option>
+            <option value="tauro">Tauro</option>
+            <option value="geminis">Géminis</option>
+            <option value="cancer">Cáncer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="escorpio">Escorpio</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="acuario">Acuario</option>
+            <option value="piscis">Piscis</option>
+        </select>
+        <select class="form-select mb-2" name="signo" id="signo_2">
+            <option value="aries">Aries</option>
+            <option value="tauro">Tauro</option>
+            <option value="geminis">Géminis</option>
+            <option value="cancer">Cáncer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="escorpio">Escorpio</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="acuario">Acuario</option>
+            <option value="piscis">Piscis</option>
+        </select>
+        <!-- Botón de comprobar -->
+        <button class="btn btn-outline-light" id="btn_comprobar">Comprobar compatibilidad</button>
+    </div>
+    <!-- Div para mostrar el resultado de la compatibilidad -->
+    <div class="container bg-outline-dark text-white fw-bold border rounded mx-auto text-center" id="resultado">
     </div>
     
 

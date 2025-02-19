@@ -7,17 +7,6 @@ body {
     background-size: cover;
 }
 
-#seleccion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#signo_1, #signo_2 {
-    width: 25%;
-}
-
 /* Sección superior */
 .navbar-top {
     background-color: #3b3a63;
