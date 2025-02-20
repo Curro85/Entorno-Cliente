@@ -2,9 +2,17 @@ body {
     font-family: 'Quicksand', sans-serif;
     background-color: #2c2c54;
     color: #f1f1f1;
-    background-image: url("https://i.pinimg.com/originals/b8/62/f8/b862f8cea5eed76dd01ddda13dc69d9e.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    animation-name: borde-color;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 /* Sección superior */
@@ -117,11 +125,6 @@ footer {
     color: #f1f1f1;
     text-align: center;
     padding: 20px 0;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
 }
 
 footer a {
