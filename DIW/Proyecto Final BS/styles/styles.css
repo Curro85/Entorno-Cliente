@@ -13,6 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*Apartado sobre mi*/
 #sobre-mi {
     padding: 60px 0;
 }
@@ -26,7 +27,7 @@ body {
     font-size: 1.2rem;
 }
 
-
+/*Apartado de experiencia*/
 #experiencia .card {
     transition: transform 0.3s ease;
 }
@@ -38,12 +39,12 @@ body {
     animation-fill-mode: forwards;
 }
 
-
+/*Apartado de proyectos*/
 #proyectos .card {
     margin-bottom: 30px;
 }
 
-
+/*Apartado de testimonios*/
 #testimonios .carousel-item {
     text-align: center;
     font-style: italic;
@@ -58,6 +59,7 @@ body {
     margin: 5px;
 }
 
+/*Apartado de contactos*/
 #contacto p {
     font-size: 1.2rem;
 }
